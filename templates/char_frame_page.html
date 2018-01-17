@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="container">
+        <div class="panel panel-default">
+          <div class="panel-heading" id="character-heading-panel">
+              <div class="row">
+                  <div class="col-md-2">
+                    <img class="character-heading-img" src="{{ url_for('static', filename='char_thumbnails/'+character|lower+'_thumbnail.png') }}" alt="">
+                  </div>
+                  <div class="col-md-3">
+                      {% if character|lower == 'devil_jin' %}
+                          <h3>DEVIL JIN</h3>
+                      {% elif character|lower == 'master_raven' %}
+                          <h3>Master Raven</h3>
+                      {% else %}
+                        <h3>{{ character|upper }}</h3>
+                      {% endif %}
+                  </div>
+              </div>
+          </div>
+          <div class="panel-body">
+              <h4>Special Moves</h4>
+              {{ ctable1|safe }}
+              <br>
+              <h4>Basic Moves</h4>
+              {{ ctable2|safe }}
+          </div>
+        </div>
+    </div>
+{% endblock %}

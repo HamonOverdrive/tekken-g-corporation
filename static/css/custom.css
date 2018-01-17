@@ -1,0 +1,272 @@
+@font-face{
+	font-family: 'Tekken'; /*a name to be used later*/
+    src: url('../fonts/tekken.ttf'); /*URL to font*/
+}
+
+body{
+    background: url("http://static1.1.sqspcdn.com/static/f/721581/27475080/1488466931827/tk7helipadstg016.jpg?token=xaaUHumju1rxqbmFv3RtomkGScs%3D");
+    background-size: 100%;
+}
+
+header {
+	height: 160px;
+	background: url("#");
+	background-repeat: no-repeat;
+	background-color: black;
+	background-position: center center;
+	background-size: cover;
+	-webkit-box-shadow: 0px -1px 9px 0px rgba(50,50,50,0.75);
+	-moz-box-shadow: 0px -1px 9px 0px rgba(50,50,50,0.75);
+	box-shadow: 0px -1px 9px 0px rgba(50,50,50,0.75);
+}
+
+.pagename a {
+	display: block;
+	width: 160px;
+	height: 140px;
+	background: url("https://pbs.twimg.com/profile_images/578315911255494656/taOvoNp-.png") no-repeat;
+	background-size: contain;
+	position: absolute;
+	color: transparent;
+	left: 0px;
+}
+
+
+/*individual character frame data page css starts here*/
+#character-heading-panel{
+	padding: 0;
+	background: linear-gradient(to right, #3366ff 15%, #00264d 50%);
+	border: 1px solid #2aabd2;
+	box-shadow: 0 0 10px #2aabd2;
+	margin: -1.5px;
+	outline: none;
+}
+
+.character-heading-img{
+	width: 80%;
+	height: 10%;
+	background-color: #3366ff;
+}
+
+.framedata_table{
+	width: 100%;
+	border: 1px solid;
+	border-collapse: collapse;
+}
+
+.framedata_table th{
+	padding: 8px;
+	background-color: black;
+	color: white;
+}
+
+.framedata_table td{
+	padding: 8px;
+	color: white;
+}
+
+.framedata_table tr:nth-child(odd){
+	background-color: #404040;
+}
+
+.framedata_table tr:nth-child(even) {
+    background-color: #4d4d4d;
+}
+
+
+/*frame data page css ends here*/
+
+/*tab menu for navbar css starts here*/
+.tabmenu {
+	position: absolute;
+	bottom: -23px;
+}
+
+.tabmenu {
+	list-style-type: none;
+	white-space: nowrap;
+	display: inline-block;
+	margin-top: 5px;
+	vertical-align: bottom;
+}
+
+.tabmenu li {
+	display: inline;
+	font-weight: bold;
+	margin: 0px 3px;
+}
+
+.tabmenu li {
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.tabmenu li a {
+	color: #fff;
+	background-color: rgba(255,255,255,.3);
+	text-shadow: 0px 0px 5px #000;
+}
+
+.tabmenu li a {
+	padding: 2px 6px 0 6px;
+	background-color: #eff7ff;
+}
+
+/*tabmenu ends here*/
+
+h1{
+	color: white;
+	font-family: 'Tekken';
+}
+
+h3{
+	color: #fff;
+	font-family: "Core Sans G",Arial,sans-serif;
+	font-style: italic;
+	font-size: 25px;
+	text-transform: uppercase;
+	text-align: left;
+	padding-left: 5px;
+}
+
+
+/*Character select css starts here*/
+
+#characterselect img {
+    border: 2px solid #000066;
+    border-radius: 4px;
+    padding: 0px;
+    width: 150px;
+}
+
+#characterselect img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+#characterselect {
+	clear: both;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	border: 0px;
+	position: relative;
+}
+
+#characterselect ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	float: right;
+	position: relative;
+	right: 50%;
+}
+
+/*list style you can switch the bullet points to something else or delcaration*/
+#characterselect ul {
+	list-style: none;
+}
+
+#characterselect ul li {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	position: relative;
+	left: 50%;
+}
+
+/*#characterselect ul li a {*/
+	/*border: 2px solid #337642;*/
+/*}*/
+
+
+/*#characterselect ul li a:hover, #navigation ul li:hover a {*/
+	/*border: 2px solid #C69214;*/
+/*}*/
+
+
+#characterselect ul li a {
+	display: block;
+	color: #4a4958;
+	margin: 2px;
+	width: 44px;
+	height: 74px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+/*character select css ends here*/
+
+
+
+
+/*bootstrap SHARP EDGES*/
+/*
+    Bootflat 1.0.1
+    Designed & Built by flathemes, http://www.flathemes.com
+    Licensed under MIT License, http://opensource.org/licenses/mit-license.html
+    Thanks for supporting our website and enjoy!
+*/
+/*------------------------------------*\
+    $default
+\*------------------------------------*/
+.img-thumbnail,
+.btn,
+.btn-group .btn,
+.btn-group .dropdown-menu,
+.btn-group .btn,
+.btn-group .btn:first-child:not(:last-child),
+.btn-group .btn:last-child:not(:first-child),
+.table-bordered,
+.table-bordered tr:first-child th:first-child,
+.table-bordered tr:first-child th:last-child,
+.table-bordered tr:last-child td:first-child,
+.table-bordered tr:last-child td:last-child,
+.input-group .btn,
+.input-group .dropdown-menu,
+.input-group .form-control,
+.input-group .input-group-addon,
+.dropdown-menu,
+.dropdown-menu .dropdown-submenu .dropdown-menu,
+.form .form-control,
+.form .btn,
+.form-control,
+.label,
+.badge,
+.alert,
+.alert .btn,
+.progress,
+.breadcrumb,
+.tooltip .tooltip-inner,
+.popover,
+.nav-list-panel,
+.nav-tabs li > a,
+.tabs-below .nav-tabs li > a,
+.tabs-right .nav-tabs li > a,
+.tabs-left .nav-tabs li > a,
+.nav-tabs .dropdown-menu,
+.tabs-below .nav-tabs .dropdown-menu,
+.nav-pills li a,
+.nav-pills .dropdown-menu,
+.navbar,
+.navbar .dropdown-menu,
+.pagination,
+.pagination li:first-child a,
+.pagination li:first-child span,
+.pagination li:last-child a,
+.pagination li:last-child span,
+.pager li a,
+.pager li a:hover,
+.pager li a:focus,
+.panel,
+.panel-group .panel,
+.panel-group .panel-heading,
+.panel-group .panel-body,
+/*------------------------------------*\
+    $extend
+\*------------------------------------*/
+.breadcrumb-arrow li:first-child a {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
