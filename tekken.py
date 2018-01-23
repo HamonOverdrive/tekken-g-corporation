@@ -12,8 +12,8 @@ def index():
 @app.route('/frame-data/<string:character>')
 def frame_page(character):
     # get data frame of character csv into html format object for jinja
-    df1 = pd.read_csv(r'C:\Users\Robin\PycharmProjects\tekken\static\char_csvs\{}1.csv'.format(character))
-    df2 = pd.read_csv(r'C:\Users\Robin\PycharmProjects\tekken\static\char_csvs\{}2.csv'.format(character))
+    df1 = pd.read_csv(fr'/home/rlee/PycharmProjects/tekken-g-corporation/static/char_csvs2/{character}1.csv')
+    df2 = pd.read_csv(fr'/home/rlee/PycharmProjects/tekken-g-corporation/static/char_csvs2/{character}2.csv')
 
     # gets rid of Nan date with blanks have to use this so html does not show it
     df1 = df1.fillna('')

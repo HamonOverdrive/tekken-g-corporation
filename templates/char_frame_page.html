@@ -6,7 +6,7 @@
           <div class="panel-heading" id="character-heading-panel">
               <div class="row">
                   <div class="col-md-2">
-                    <img class="character-heading-img" src="{{ url_for('static', filename='char_thumbnails/'+character|lower+'_thumbnail.png') }}" alt="">
+                    <img class="img-responsive" src="{{ url_for('static', filename='char_thumbnails/'+character|lower+'_thumbnail.png') }}" alt="">
                   </div>
                   <div class="col-md-3">
                       {% if character|lower == 'devil_jin' %}
@@ -21,10 +21,14 @@
           </div>
           <div class="panel-body">
               <h4>Special Moves</h4>
-              {{ ctable1|safe }}
+              <div class="table-responsive">
+                {{ ctable1|safe }}
+              </div>
               <br>
               <h4>Basic Moves</h4>
-              {{ ctable2|safe }}
+              <div class="table-responsive">
+                {{ ctable2|safe }}
+              </div>
           </div>
         </div>
     </div>
