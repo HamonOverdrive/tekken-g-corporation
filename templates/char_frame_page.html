@@ -5,10 +5,11 @@
         <div class="panel panel-default">
           <div class="panel-heading" id="character-heading-panel">
               <div class="row">
-                  <div class="col-md-2">
-                    <img class="img-responsive" src="{{ url_for('static', filename='char_thumbnails/'+character|lower+'_thumbnail.png') }}" alt="">
+                  <div class="col-xs-2 col-md-2">
+                    <img class="character-heading-img" src="{{ url_for('static', filename='char_thumbnails/'+character|lower+'_thumbnail.png') }}" alt="{{ character }}">
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-xs-3 col-md-3">
+                      {#for design change some char names because#}
                       {% if character|lower == 'devil_jin' %}
                           <h3>DEVIL JIN</h3>
                       {% elif character|lower == 'master_raven' %}

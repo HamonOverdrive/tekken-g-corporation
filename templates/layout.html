@@ -7,6 +7,9 @@
     <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">
 	<link rel="shortcut icon" href="{{ url_for('static', filename='extra_images/G_Corporation_Logo.png') }}">
+
+    <meta name="description" content="Tekken G-Corp provides information on Tekken strategies and a more
+                                      convenient presentable way to view individual character frame data.">
 </head>
 <body>
 
@@ -16,10 +19,17 @@
             <div class="col-md-3">
                 <span class="hover pagename redditname"><a href="/">Tekken</a></span>
             </div>
+            <div class="col-md-4">
+                <h2 class="navi-header">Tekken G-Corporation Frame Data</h2>
+            </div>
             <div class="col-md-5">
-                <h1>Tekken G-Corporation Frame Data</h1>
-
-                <ul class="tabmenu "><li class="selected"><a href="https://www.reddit.com/r/Tekken/" class="choice">hot</a></li><li><a href="https://www.reddit.com/r/Tekken/new/" class="choice">new</a></li><li><a href="https://www.reddit.com/r/Tekken/rising/" class="choice">rising</a></li><li><a href="https://www.reddit.com/r/Tekken/controversial/" class="choice">controversial</a></li><li><a href="https://www.reddit.com/r/Tekken/top/" class="choice">top</a></li><li><a href="https://www.reddit.com/r/Tekken/gilded/" class="choice">gilded</a></li><li><a href="https://www.reddit.com/r/Tekken/wiki/" class="choice">wiki</a></li>
+                <ul class="tabmenu">
+                    <li class="selected">
+                        <a class="choice" href="/">Home</a>
+                    </li>
+                    <li>
+                        <a class="choice" href="/">Characters</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -32,9 +42,13 @@
 
 {% block body %}{% endblock %}
 
-{% block footer %}
-    &copy; 2017 Tekken G-Corp
-{% endblock %}
+<footer>
+    <div class="container">
+        <div class="footer" id="footer-contain">
+            &copy; 2017 Tekken G-Corp
+        </div>
+    </div>
+</footer>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"
 			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="

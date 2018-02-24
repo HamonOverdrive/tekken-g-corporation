@@ -9,13 +9,13 @@
             <div class="panel-body" style="width: 100%;">
               <div id="characterselect">
                   {#character list order and position is also formatted here what it should look like on website#}
-                  {% set character_list = ["Panda","Eliza","Lee","Bob","Nina","Akuma","Kazumi","Master_Raven","Miguel","Kuma","Eddy",
+                  {% set character_list = ["Geese","Panda","Eliza","Lee","Bob","Nina","Akuma","Kazumi","Master_Raven","Miguel","Kuma","Eddy",
                   "Yoshimitsu","Dragunov","Hwoarang","Law","Asuka","Shaheen","Kazuya","Heihachi","Claudio","LuckyChloe","Lili","Lars","King","Jack-7",
                         "Bryan","Steve","Paul","Xiaoyu","Josie","Jin","Devil_Jin","Katarina","Gigas","Leo","Alisa","Feng"] %}
                         {#having list of characters for loop through it by assigning each character as a select option#}
                         {% for character in character_list %}
                             {#create a ul tag if first character in list row as there are 3 rows/lists to make#}
-                            {% if character == "Panda" or character == "Yoshimitsu" or character =="Bryan" %}
+                            {% if character == "Geese" or character == "Yoshimitsu" or character =="Bryan" %}
                                 <ul>
                             {% endif %}
                             {% set href = "/frame-data/"+character %}

@@ -1,17 +1,23 @@
+html{
+	font-size: 10px;
+}
+
 @font-face{
 	font-family: 'Tekken'; /*a name to be used later*/
     src: url('../fonts/tekken.ttf'); /*URL to font*/
 }
 
+
 body{
-    background: url("http://static1.1.sqspcdn.com/static/f/721581/27475080/1488466931827/tk7helipadstg016.jpg?token=xaaUHumju1rxqbmFv3RtomkGScs%3D");
+    background: url("../extra_images/tk7helipad.jpg");
     background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: #0f0f0f;
+	background-attachment: fixed;
 }
 
 header {
-	height: 160px;
-	background: url("#");
-	background-repeat: no-repeat;
+	height: 120px;
 	background-color: black;
 	background-position: center center;
 	background-size: cover;
@@ -20,16 +26,11 @@ header {
 	box-shadow: 0px -1px 9px 0px rgba(50,50,50,0.75);
 }
 
-h1{
-	color: white;
-	font-family: 'Tekken';
-}
-
 h3{
 	color: #fff;
 	font-family: "Core Sans G",Arial,sans-serif;
 	font-style: italic;
-	font-size: 25px;
+	font-weight: 600;
 	text-transform: uppercase;
 	text-align: left;
 	padding-left: 5px;
@@ -39,16 +40,36 @@ h3{
     /* tablets and desktop */
 }
 
+.navi-header{
+	color: white;
+	font-family: 'Tekken';
+	display: inline-block;
+	height: 90px;
+	line-height: 1.05;
+}
+
 
 .pagename a {
 	display: block;
 	width: 160px;
-	height: 140px;
-	background: url("https://pbs.twimg.com/profile_images/578315911255494656/taOvoNp-.png") no-repeat;
+	height: 110px;
+	background: url("../extra_images/glogoheader.png") no-repeat;
 	background-size: contain;
 	position: absolute;
 	color: transparent;
 	left: 0px;
+}
+
+/*right side nav header starts here*/
+.tabmenu{
+	list-style-type: none;
+	display: inline-block;
+	vertical-align: bottom;
+	padding-top: 100px;
+}
+
+.tabmenu li{
+	display: inline;
 }
 
 
@@ -62,9 +83,10 @@ h3{
 	outline: none;
 }
 
+/*css makes it so img does not change size in windowed mode px means fixed percentages changes with responsive size*/
 .character-heading-img{
-	width: 80%;
-	height: 10%;
+	max-width: 200px;
+	max-height: 70px;
 	background-color: #3366ff;
 }
 
@@ -94,45 +116,42 @@ h3{
 }
 
 
+/*fixed using https://stackoverflow.com/questions/21168521/scrollable-table-with-fixed-header-in-bootstrap*/
+/*testing scrollable table code start here*/
+.framedata_table > thead,
+.framedata_table > tbody,
+.framedata_table > thead > tr,
+.framedata_table > tbody > tr,
+.framedata_table > thead > tr > th,
+.framedata_table > tbody > tr > td {
+    display: block;
+}
+
+.framedata_table > tbody > tr:after,
+.framedata_table > thead > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.framedata_table > tbody {
+    overflow-y: auto;
+    height: 500px;
+}
+
+.framedata_table > tbody > tr > td,
+.framedata_table > thead > tr > th {
+    width: 12.5%;
+    float: left;
+}
+/*test css ends here*/
+
+
+
 /*frame data page css ends here*/
 
-/*tab menu for navbar css starts here*/
-.tabmenu {
-	position: absolute;
-	bottom: -23px;
-}
 
-.tabmenu {
-	list-style-type: none;
-	white-space: nowrap;
-	display: inline-block;
-	margin-top: 5px;
-	vertical-align: bottom;
-}
-
-.tabmenu li {
-	display: inline;
-	font-weight: bold;
-	margin: 0px 3px;
-}
-
-.tabmenu li {
-	margin: 0;
-	text-transform: uppercase;
-}
-
-.tabmenu li a {
-	color: #fff;
-	background-color: rgba(255,255,255,.3);
-	text-shadow: 0px 0px 5px #000;
-}
-
-.tabmenu li a {
-	padding: 2px 6px 0 6px;
-	background-color: #eff7ff;
-}
-
-/*tabmenu ends here*/
 
 
 /*Character select css starts here*/
@@ -141,7 +160,8 @@ h3{
     border: 2px solid #000066;
     border-radius: 4px;
     padding: 0px;
-    width: 150px;
+    width: 44px;
+	height: 74px;
 }
 
 #characterselect img:hover {
@@ -180,16 +200,6 @@ h3{
 	left: 50%;
 }
 
-/*#characterselect ul li a {*/
-	/*border: 2px solid #337642;*/
-/*}*/
-
-
-/*#characterselect ul li a:hover, #navigation ul li:hover a {*/
-	/*border: 2px solid #C69214;*/
-/*}*/
-
-
 #characterselect ul li a {
 	display: block;
 	color: #4a4958;
@@ -202,7 +212,10 @@ h3{
 
 /*character select css ends here*/
 
-
+/*start of footer css*/
+#footer-contain{
+	background-color: white;
+}
 
 
 /*bootstrap SHARP EDGES*/
