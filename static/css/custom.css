@@ -26,6 +26,10 @@ header {
 	box-shadow: 0px -1px 9px 0px rgba(50,50,50,0.75);
 }
 
+footer{
+	margin: 0;
+}
+
 h3{
 	color: #fff;
 	font-family: "Core Sans G",Arial,sans-serif;
@@ -34,6 +38,11 @@ h3{
 	text-transform: uppercase;
 	text-align: left;
 	padding-left: 5px;
+}
+
+.panel{
+	margin-bottom: 0;
+	border: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -63,7 +72,6 @@ h3{
 /*right side nav header starts here*/
 .tabmenu{
 	list-style-type: none;
-	display: inline-block;
 	vertical-align: bottom;
 	padding-top: 100px;
 }
@@ -72,7 +80,22 @@ h3{
 	display: inline;
 }
 
+.tabmenu a{
+	outline: none;
+	text-decoration: none;
+	display: inline-block;
+	width: 30%;
+	margin-right: 0.625%;
+	text-align: center;
+	line-height: 0;
+	font-weight: 600;
+	color: hsla(0, 0%, 76%);
+}
 
+/*Nav stuff ends here*/
+
+
+/*TODO: solve img header fitting problem*/
 /*individual character frame data page css starts here*/
 #character-heading-panel{
 	padding: 0;
@@ -81,6 +104,7 @@ h3{
 	box-shadow: 0 0 10px #2aabd2;
 	margin: -1.5px;
 	outline: none;
+	/*max-height: 72px;*/
 }
 
 /*css makes it so img does not change size in windowed mode px means fixed percentages changes with responsive size*/
@@ -88,7 +112,11 @@ h3{
 	max-width: 200px;
 	max-height: 70px;
 	background-color: #3366ff;
+	/*poisiton relative and top negative to align img into to panel header correctly*/
+	/*position: relative;*/
+	/*top: -9px;*/
 }
+
 
 .framedata_table{
 	width: 100%;
@@ -214,7 +242,7 @@ h3{
 
 /*start of footer css*/
 #footer-contain{
-	background-color: white;
+	background-color: skyblue;
 }
 
 

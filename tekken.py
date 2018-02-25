@@ -15,6 +15,14 @@ def frame_page(character):
 
     return render_template("char_frame_page.html", character=character, ctable1=frame_soup1, ctable2=frame_soup2)
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html')
+
+@app.errorhandler(500)
+def page_not_found(e):
+    return render_template('500.html')
+
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)

@@ -1,11 +1,12 @@
 {% extends "layout.html" %}
+{% block title %}Frame Data | {{ character }}{% endblock %}
 
 {% block body %}
     <div class="container">
         <div class="panel panel-default">
           <div class="panel-heading" id="character-heading-panel">
               <div class="row">
-                  <div class="col-xs-2 col-md-2">
+                  <div class="box-img col-xs-2 col-md-2">
                     <img class="character-heading-img" src="{{ url_for('static', filename='char_thumbnails/'+character|lower+'_thumbnail.png') }}" alt="{{ character }}">
                   </div>
                   <div class="col-xs-3 col-md-3">

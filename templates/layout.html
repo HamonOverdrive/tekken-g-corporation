@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tekken G-Corp</title>
+    <title>{% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">
 	<link rel="shortcut icon" href="{{ url_for('static', filename='extra_images/G_Corporation_Logo.png') }}">
 
-    <meta name="description" content="Tekken G-Corp provides information on Tekken strategies and a more
+    <meta name="description" content="Tekken G-Corp provides information on Tekken 7 strategies and a more
                                       convenient presentable way to view individual character frame data.">
 </head>
 <body>
@@ -17,7 +17,7 @@
     <div class="container" id="header-bottom-left">
         <div class="row">
             <div class="col-md-3">
-                <span class="hover pagename redditname"><a href="/">Tekken</a></span>
+                <span class="pagename"><a href="/">Tekken</a></span>
             </div>
             <div class="col-md-4">
                 <h2 class="navi-header">Tekken G-Corporation Frame Data</h2>
@@ -28,7 +28,10 @@
                         <a class="choice" href="/">Home</a>
                     </li>
                     <li>
-                        <a class="choice" href="/">Characters</a>
+                        <a class="choice" href="/">Character Select</a>
+                    </li>
+                    <li>
+                        <a class="choice" href="/">Tournaments</a>
                     </li>
                 </ul>
             </div>
