@@ -242,7 +242,12 @@ h3{
 
 /*start of footer css*/
 #footer-contain{
-	background-color: skyblue;
+	background-color: hsl(0, 0%, 95%);
+}
+
+#footer-contain p {
+    padding-top: 1em;
+    padding-left: 1em;
 }
 
 
