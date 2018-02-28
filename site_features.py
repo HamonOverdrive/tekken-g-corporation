@@ -4,9 +4,13 @@ from bs4 import BeautifulSoup
 
 def inject_frame_data(character):
     'Injects frame data tables to website'
-    # get data frame of character csv into html format object for jinja
-    df1 = pd.read_csv(r'/home/rlee/PycharmProjects/tekken-g-corporation/static/char_csvs2/{}1.csv'.format(character))
-    df2 = pd.read_csv(r'/home/rlee/PycharmProjects/tekken-g-corporation/static/char_csvs2/{}2.csv'.format(character))
+    # get data frame of character csv into html format object for jinja uncomment for local practice
+    # df1 = pd.read_csv(fr'/home/rlee/PycharmProjects/tekken-g-corporation/static/char_csvs2/{character}1.csv')
+    # df2 = pd.read_csv(fr'/home/rlee/PycharmProjects/tekken-g-corporation/static/char_csvs2/{character}2.csv')
+
+    # second one is for python anywhere
+    df1 = pd.read_csv(fr'/home/robautomata/tekken-g-corporation/static/char_csvs2/{character}1.csv')
+    df2 = pd.read_csv(fr'/home/robautomata/tekken-g-corporation/static/char_csvs2/{character}2.csv')
 
     # gets rid of Nan date with blanks have to use this so html does not show it
     df1 = df1.fillna('')
