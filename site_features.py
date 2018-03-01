@@ -8,7 +8,7 @@ def inject_frame_data(character):
     # df1 = pd.read_csv(fr'/home/rlee/PycharmProjects/tekken-g-corporation/static/char_csvs2/{character}1.csv')
     # df2 = pd.read_csv(fr'/home/rlee/PycharmProjects/tekken-g-corporation/static/char_csvs2/{character}2.csv')
 
-    # second one is for python anywhere
+    # # second one is for python anywhere
     df1 = pd.read_csv(fr'/home/robautomata/tekken-g-corporation/static/char_csvs2/{character}1.csv')
     df2 = pd.read_csv(fr'/home/robautomata/tekken-g-corporation/static/char_csvs2/{character}2.csv')
 

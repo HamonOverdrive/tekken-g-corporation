@@ -2,24 +2,25 @@
 {% block title %}Frame Data | {{ character }}{% endblock %}
 
 {% block body %}
-    <div class="container">
+    <div class="container-fluid">
         <div class="panel panel-default">
           <div class="panel-heading" id="character-heading-panel">
-              <div class="row">
                   <div class="box-img col-xs-2 col-md-2">
                     <img class="character-heading-img" src="{{ url_for('static', filename='char_thumbnails/'+character|lower+'_thumbnail.png') }}" alt="{{ character }}">
                   </div>
                   <div class="col-xs-3 col-md-3">
                       {#for design change some char names because#}
+                    <h3 class="char-title">
                       {% if character|lower == 'devil_jin' %}
-                          <h3>DEVIL JIN</h3>
+                          DEVIL JIN
                       {% elif character|lower == 'master_raven' %}
-                          <h3>Master Raven</h3>
+                          Master Raven
                       {% else %}
-                        <h3>{{ character|upper }}</h3>
+                        {{ character|upper }}
                       {% endif %}
+                    </h3>
                   </div>
-              </div>
+
           </div>
           <div class="panel-body">
               <h4>Special Moves</h4>

@@ -9,11 +9,7 @@ html{
 
 
 body{
-    background: url("../extra_images/tk7helipad.jpg");
-    background-size: 100%;
-	background-repeat: no-repeat;
 	background-color: #0f0f0f;
-	background-attachment: fixed;
 }
 
 header {
@@ -40,13 +36,28 @@ h3{
 	padding-left: 5px;
 }
 
+/*gets rid of extra white space of container-fluid*/
+.container-fluid {
+    padding-right:0;
+    padding-left:0;
+    margin-right:auto;
+    margin-left:auto
+ }
+
 .panel{
 	margin-bottom: 0;
 	border: none;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
     /* tablets and desktop */
+	body{
+		font-size: 10px;
+	}
+	/*if you want to hide it has to be entire div */
+	.title-corp-header{
+		display: none;
+	}
 }
 
 .navi-header{
@@ -66,7 +77,6 @@ h3{
 	background-size: contain;
 	position: absolute;
 	color: transparent;
-	left: 0px;
 }
 
 /*right side nav header starts here*/
@@ -83,9 +93,10 @@ h3{
 .tabmenu a{
 	outline: none;
 	text-decoration: none;
-	display: inline-block;
-	width: 30%;
-	margin-right: 0.625%;
+	display: inline;
+	/*display: inline-block;*/
+	/*width: 30%;*/
+	margin-right: 2.625%;
 	text-align: center;
 	line-height: 0;
 	font-weight: 600;
@@ -98,23 +109,29 @@ h3{
 /*TODO: solve img header fitting problem*/
 /*individual character frame data page css starts here*/
 #character-heading-panel{
-	padding: 0;
+
 	background: linear-gradient(to right, #3366ff 15%, #00264d 50%);
 	border: 1px solid #2aabd2;
 	box-shadow: 0 0 10px #2aabd2;
-	margin: -1.5px;
+	margin: 0px;
 	outline: none;
+	height: 70px;
 	/*max-height: 72px;*/
 }
 
 /*css makes it so img does not change size in windowed mode px means fixed percentages changes with responsive size*/
 .character-heading-img{
 	max-width: 200px;
-	max-height: 70px;
+	max-height: 67px;
 	background-color: #3366ff;
-	/*poisiton relative and top negative to align img into to panel header correctly*/
-	/*position: relative;*/
-	/*top: -9px;*/
+	/*position relative and top negative to align img into to panel header correctly*/
+	position: relative;
+	top: -10px;
+}
+
+.char-title {
+	position: relative;
+	top: -7px;
 }
 
 
@@ -122,6 +139,7 @@ h3{
 	width: 100%;
 	border: 1px solid;
 	border-collapse: collapse;
+	overflow: auto;
 }
 
 .framedata_table th{
