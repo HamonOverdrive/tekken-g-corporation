@@ -106,6 +106,25 @@ h3{
 		background-color: black;
 	}
 
+	.box-img {
+		display: none;
+	}
+
+	.char-title-box {
+		width: 80%;
+	}
+
+	/*this rule is the dropdown menu items properties*/
+	.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+		color: yellowgreen;
+		background-color: black;
+		position: relative;
+		z-index: 10;
+	}
+	.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
+		background-color: black;
+	}
+
 }
 
 .navi-title {
