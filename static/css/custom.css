@@ -1,3 +1,34 @@
+/*testing new navbar css here */
+
+
+
+header {
+	height: 90px;
+	background-color: black;
+	background-position: center center;
+	background-size: cover;
+}
+
+nav {
+	height: 90px;
+}
+
+/*why did changing color here work but not in element?*/
+.navbar-inverse{
+	background-color: black;
+}
+
+
+.navbar-header img{
+	width: 100%;
+	height: 90px;
+	position: relative;
+	top: -18px;
+}
+/*======================*/
+/*new navbar ends here erase or copy and more*/
+
+
 html{
 	font-size: 10px;
 }
@@ -7,20 +38,21 @@ html{
     src: url('../fonts/tekken.ttf'); /*URL to font*/
 }
 
-
+/*possible fix for row over flow at https://github.com/twbs/bootstrap/issues/10711*/
 body{
 	background-color: #0f0f0f;
+	overflow-x: hidden;
 }
 
-header {
-	height: 120px;
-	background-color: black;
-	background-position: center center;
-	background-size: cover;
-	-webkit-box-shadow: 0px -1px 9px 0px rgba(50,50,50,0.75);
-	-moz-box-shadow: 0px -1px 9px 0px rgba(50,50,50,0.75);
-	box-shadow: 0px -1px 9px 0px rgba(50,50,50,0.75);
-}
+/*header {*/
+	/*height: 120px;*/
+	/*background-color: black;*/
+	/*background-position: center center;*/
+	/*background-size: cover;*/
+	/*-webkit-box-shadow: 0px -1px 9px 0px rgba(50,50,50,0.75);*/
+	/*-moz-box-shadow: 0px -1px 9px 0px rgba(50,50,50,0.75);*/
+	/*box-shadow: 0px -1px 9px 0px rgba(50,50,50,0.75);*/
+/*}*/
 
 footer{
 	margin: 0;
@@ -33,7 +65,7 @@ h3{
 	font-weight: 600;
 	text-transform: uppercase;
 	text-align: left;
-	padding-left: 5px;
+
 }
 
 /*gets rid of extra white space of container-fluid*/
@@ -41,7 +73,7 @@ h3{
     padding-right:0;
     padding-left:0;
     margin-right:auto;
-    margin-left:auto
+    margin-left:auto;
  }
 
 .panel{
@@ -52,32 +84,50 @@ h3{
 @media only screen and (max-width: 768px) {
     /* tablets and desktop */
 	body{
-		font-size: 10px;
+		font-size: 1rem;
 	}
 	/*if you want to hide it has to be entire div */
 	.title-corp-header{
 		display: none;
 	}
+	.erase-title {
+		display: none;
+	}
+
+	/*this rule changes navbar collapse links properties when windows is resized*/
+	.navbar-inverse .navbar-nav > li > a {
+		color: yellowgreen;
+		font-weight: 700;
+		padding-left: 20px;
+		z-index: 1;
+		background-color: black;
+	}
+	.navbar-inverse .navbar-nav > li > a:hover {
+		background-color: black;
+	}
+
 }
 
-.navi-header{
+.navi-title {
 	color: white;
 	font-family: 'Tekken';
 	display: inline-block;
-	height: 90px;
-	line-height: 1.05;
+	/*this height and lineheight is new*/
+	height: 50px;
+	line-height: 4;
+	/*line-height: 1.05;*/
 }
 
 
-.pagename a {
-	display: block;
-	width: 160px;
-	height: 110px;
-	background: url("../extra_images/glogoheader.png") no-repeat;
-	background-size: contain;
-	position: absolute;
-	color: transparent;
-}
+/*.pagename a {*/
+	/*display: block;*/
+	/*width: 160px;*/
+	/*height: 110px;*/
+	/*background: url("../extra_images/glogoheader.png") no-repeat;*/
+	/*background-size: contain;*/
+	/*position: absolute;*/
+	/*color: transparent;*/
+/*}*/
 
 /*right side nav header starts here*/
 .tabmenu{
@@ -106,7 +156,6 @@ h3{
 /*Nav stuff ends here*/
 
 
-/*TODO: solve img header fitting problem*/
 /*individual character frame data page css starts here*/
 #character-heading-panel{
 
@@ -193,6 +242,29 @@ h3{
 }
 /*test css ends here*/
 
+.table-title{
+	display: inline;
+	vertical-align: top;
+	line-height: 28px;
+}
+
+.table-title p{
+	padding-top: 5px;
+}
+
+.table-title a{
+	padding-left: 10px;
+}
+
+#special-moves{
+	font-weight: 700;
+	font-size: 2rem;
+}
+
+#basic-moves {
+	font-weight: 700;
+	font-size: 2rem;
+}
 
 
 /*frame data page css ends here*/
@@ -266,6 +338,7 @@ h3{
 #footer-contain p {
     padding-top: 1em;
     padding-left: 1em;
+	font-weight: 500;
 }
 
 

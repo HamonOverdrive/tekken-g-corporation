@@ -5,6 +5,7 @@
     <div class="container-fluid">
         <div class="panel panel-default">
           <div class="panel-heading" id="character-heading-panel">
+          <div class="row">
                   <div class="box-img col-xs-2 col-md-2">
                     <img class="character-heading-img" src="{{ url_for('static', filename='char_thumbnails/'+character|lower+'_thumbnail.png') }}" alt="{{ character }}">
                   </div>
@@ -21,14 +22,22 @@
                     </h3>
                   </div>
 
+            </div>
+
           </div>
           <div class="panel-body">
-              <h4>Special Moves</h4>
+              <div class="table-title">
+                 <p><span id="special-moves">Special Moves</span>
+                  <span><a class="table-switcher" href="#basic-moves">To Basic Moves</a></span></p>
+              </div>
               <div class="table-responsive">
                 {{ ctable1|safe }}
               </div>
               <br>
-              <h4>Basic Moves</h4>
+              <div class="table-title">
+                 <p><span id="basic-moves">Basic Moves</span>
+                  <span><a class="table-switcher" href="#special-moves">To Special Moves</a></span></p>
+              </div>
               <div class="table-responsive">
                 {{ ctable2|safe }}
               </div>
