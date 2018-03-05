@@ -81,7 +81,7 @@ h3{
 	border: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     /* tablets and desktop */
 	body{
 		font-size: 1rem;
