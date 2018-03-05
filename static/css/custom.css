@@ -44,15 +44,7 @@ body{
 	overflow-x: hidden;
 }
 
-/*header {*/
-	/*height: 120px;*/
-	/*background-color: black;*/
-	/*background-position: center center;*/
-	/*background-size: cover;*/
-	/*-webkit-box-shadow: 0px -1px 9px 0px rgba(50,50,50,0.75);*/
-	/*-moz-box-shadow: 0px -1px 9px 0px rgba(50,50,50,0.75);*/
-	/*box-shadow: 0px -1px 9px 0px rgba(50,50,50,0.75);*/
-/*}*/
+
 
 footer{
 	margin: 0;
@@ -81,52 +73,6 @@ h3{
 	border: none;
 }
 
-@media screen and (max-width: 768px) {
-    /* tablets and desktop */
-	body{
-		font-size: 1rem;
-	}
-	/*if you want to hide it has to be entire div */
-	.title-corp-header{
-		display: none;
-	}
-	.erase-title {
-		display: none;
-	}
-
-	/*this rule changes navbar collapse links properties when windows is resized*/
-	.navbar-inverse .navbar-nav > li > a {
-		color: yellowgreen;
-		font-weight: 700;
-		padding-left: 20px;
-		z-index: 1;
-		background-color: black;
-	}
-	.navbar-inverse .navbar-nav > li > a:hover {
-		background-color: black;
-	}
-
-	.box-img {
-		display: none;
-	}
-
-	.char-title-box {
-		width: 80%;
-	}
-
-	/*this rule is the dropdown menu items properties*/
-	.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-		color: yellowgreen;
-		background-color: black;
-		position: relative;
-		z-index: 10;
-	}
-	.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
-		background-color: black;
-	}
-
-}
-
 .navi-title {
 	color: white;
 	font-family: 'Tekken';
@@ -137,16 +83,6 @@ h3{
 	/*line-height: 1.05;*/
 }
 
-
-/*.pagename a {*/
-	/*display: block;*/
-	/*width: 160px;*/
-	/*height: 110px;*/
-	/*background: url("../extra_images/glogoheader.png") no-repeat;*/
-	/*background-size: contain;*/
-	/*position: absolute;*/
-	/*color: transparent;*/
-/*}*/
 
 /*right side nav header starts here*/
 .tabmenu{
@@ -358,6 +294,52 @@ h3{
     padding-top: 1em;
     padding-left: 1em;
 	font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    /* tablets and desktop */
+	body{
+		font-size: 1rem;
+	}
+	/*if you want to hide it has to be entire div */
+	.title-corp-header{
+		display: none;
+	}
+	.erase-title {
+		display: none;
+	}
+
+	/*this rule changes navbar collapse links properties when windows is resized*/
+	.navbar-inverse .navbar-nav > li > a {
+		color: yellowgreen;
+		font-weight: 700;
+		padding-left: 20px;
+		z-index: 1;
+		background-color: black;
+	}
+	.navbar-inverse .navbar-nav > li > a:hover {
+		background-color: black;
+	}
+
+	.box-img {
+		display: none;
+	}
+
+	.char-title-box {
+		width: 80%;
+	}
+
+	/*this rule is the dropdown menu items properties*/
+	.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+		color: yellowgreen;
+		background-color: black;
+		position: relative;
+		z-index: 10;
+	}
+	.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
+		background-color: black;
+	}
+
 }
 
 
