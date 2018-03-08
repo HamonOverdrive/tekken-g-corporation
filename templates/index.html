@@ -19,7 +19,8 @@
                             {% if character == "Geese" or character == "Yoshimitsu" or character =="Bryan" %}
                                 <ul>
                             {% endif %}
-                            {% set href = "/frame-data/"+character %}
+                            {#href here refers to bottom left preview of route and title is seen on hover#}
+                            {% set href = "/frame-data/"+character|lower %}
                             {% set title = "Tekken 7 |"+character %}
                             <li><a href={{ href }} title={{ title }}><img alt="T7 select {{ character|lower }}.png" src="{{ url_for('static', filename='char/T7_select_'+character|lower+'.png') }}" class="img-responsive" width="44" height="74"></a></li>
                             {#close ul tag after character is set with the given tags if current character is last of row list #}

@@ -11,6 +11,8 @@ def index():
 # frame data tables for each character
 @app.route('/frame-data/<string:character>')
 def frame_page(character):
+    # make this character = lower so that it looks for the lowercase file and href lowercase works
+    character = character.lower()
     frame_soup1, frame_soup2 = inject_frame_data(character)
 
     return render_template("char_frame_page.html", character=character, ctable1=frame_soup1, ctable2=frame_soup2)

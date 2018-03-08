@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-{% block title %}Frame Data | {{ character }}{% endblock %}
+{% block title %}Frame Data | {{ character|title }}{% endblock %}
 
 {% block body %}
     <div class="container-fluid">
@@ -15,7 +15,7 @@
                       {% if character|lower == 'devil_jin' %}
                           DEVIL JIN
                       {% elif character|lower == 'master_raven' %}
-                          Master Raven
+                          MASTER RAVEN
                       {% else %}
                         {{ character|upper }}
                       {% endif %}

@@ -21,8 +21,8 @@ for character in character_list:
 
     # index gets rid of index on side which is not needed
     # note: header=None gets rid of the first row which was numbers as a headers
-    df1[0].to_csv(f'{character}1.csv', index=False, header=None)
-    df2[0].to_csv(f'{character}2.csv', index=False, header=None)
+    df1[0].to_csv(f'{character.lower()}1.csv', index=False, header=None)
+    df2[0].to_csv(f'{character.lower()}2.csv', index=False, header=None)
 
 # data = df[0]
 # print(data)
