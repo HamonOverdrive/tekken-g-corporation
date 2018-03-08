@@ -1,36 +1,6 @@
-/*testing new navbar css here */
-
-
-
-header {
-	height: 90px;
-	background-color: black;
-	background-position: center center;
-	background-size: cover;
-}
-
-nav {
-	height: 90px;
-}
-
-/*why did changing color here work but not in element?*/
-.navbar-inverse{
-	background-color: black;
-}
-
-
-.navbar-header img{
-	width: 90px;
-	height: 90px;
-	position: relative;
-	top: -18px;
-}
-/*======================*/
-/*new navbar ends here erase or copy and more*/
-
-
 html{
 	font-size: 10px;
+	overflow-x: hidden;
 }
 
 @font-face{
@@ -42,6 +12,17 @@ html{
 body{
 	background-color: #0f0f0f;
 	overflow-x: hidden;
+}
+
+header {
+	height: 90px;
+	background-color: black;
+	background-position: center center;
+	background-size: cover;
+}
+
+nav {
+	height: 90px;
 }
 
 
@@ -71,6 +52,19 @@ h3{
 .panel{
 	margin-bottom: 0;
 	border: none;
+}
+
+/*why did changing color here work but not in element?*/
+.navbar-inverse{
+	background-color: black;
+}
+
+
+.navbar-header img{
+	width: 90px;
+	height: 90px;
+	position: relative;
+	top: -18px;
 }
 
 .navi-title {
