@@ -1,16 +1,16 @@
-import pandas as pd
+import os, pandas as pd
 from bs4 import BeautifulSoup
 
 
 def inject_frame_data(character):
     'Injects frame data tables to website'
-    # get data frame of character csv into html format object for jinja uncomment for local practice
-    # df1 = pd.read_csv(fr'/home/rlee/PycharmProjects/tekken-g-corporation/static/char_csvs2/{character}1.csv')
-    # df2 = pd.read_csv(fr'/home/rlee/PycharmProjects/tekken-g-corporation/static/char_csvs2/{character}2.csv')
 
-    # # second one is for python anywhere
-    df1 = pd.read_csv(fr'/home/robautomata/tekken-g-corporation/static/char_csvs2/{character}1.csv')
-    df2 = pd.read_csv(fr'/home/robautomata/tekken-g-corporation/static/char_csvs2/{character}2.csv')
+    #this file (site_features.py) must remain in the root folder of the site or this variable dir_path must be altered
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+
+    # get data frame of character csv into html format object
+    df1 = pd.read_csv(fr'{dir_path}/static/char_csvs2/{character}1.csv')
+    df2 = pd.read_csv(fr'{dir_path}/static/char_csvs2/{character}2.csv')
 
     # gets rid of Nan date with blanks have to use this so html does not show it
     df1 = df1.fillna('')
