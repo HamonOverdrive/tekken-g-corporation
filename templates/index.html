@@ -1,12 +1,12 @@
 {% extends "layout.html" %}
 {% block title %}Tekken G-Corp{% endblock %}
 
+
 {% block body %}
+    {#Note: make sure include headers is inside body or will not load properly#}
     <div class="container-fluid">
         <div class="panel panel-primary">
-            <div class="panel-heading">
-                <h3 class="panel-title">Characters</h3>
-            </div>
+            {% include 'index_panel_header.html' %}
             <div class="panel-body" style="width: 100%;">
                 <div id="characterselect">
                     {#character list order and position is also formatted here what it should look like on website#}

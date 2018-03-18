@@ -54,13 +54,14 @@ h3{
 	border: none;
 }
 
+/*This is for the first title(black) nav bar*/
 /*why did changing color here work but not in element?*/
 .navbar-inverse{
 	background-color: black;
 }
 
 
-.navbar-header img{
+#glogo-pic-title-bar{
 	width: 90px;
 	height: 90px;
 	position: relative;
@@ -76,33 +77,34 @@ h3{
 	line-height: 4;
 	/*line-height: 1.05;*/
 }
+/*title bar ends here*/
 
 
-/*right side nav header starts here*/
-.tabmenu{
-	list-style-type: none;
-	vertical-align: bottom;
-	padding-top: 100px;
+/*panel header nav bar stuff*/
+.panel-title{
+	margin-top: 16px;
+}
+.navbar-nav > li > a{
+	color: hsl(208, 56%, 24%);
 }
 
-.tabmenu li{
-	display: inline;
+.navbar-toggle{
+	border: 1px solid black;
 }
 
-.tabmenu a{
-	outline: none;
-	text-decoration: none;
-	display: inline;
-	/*display: inline-block;*/
-	/*width: 30%;*/
-	margin-right: 2.625%;
-	text-align: center;
-	line-height: 0;
-	font-weight: 600;
-	color: hsla(0, 0%, 76%);
+.navbar-toggle .icon-bar {
+    background-color: black;
 }
 
-/*Nav stuff ends here*/
+.nav > li > a:hover, .nav > li > a:focus{
+	background-color: #337ab7;
+}
+
+
+/*panel header Nav stuff ends here*/
+
+/*new css for char pagees*/
+
 
 
 /*individual character frame data page css starts here*/
@@ -130,6 +132,7 @@ h3{
 .char-title {
 	position: relative;
 	top: -7px;
+	left: 20px;
 }
 
 
@@ -378,6 +381,16 @@ h3{
 		display: none;
 	}
 
+	#char-img-frame {
+		display: none!important;
+	}
+
+	.char-title{
+		position: relative;
+		top: -65px;
+	}
+
+	/*TODO: fix window resized for menu of navbar on char pages*/
 	/*this rule changes navbar collapse links properties when windows is resized*/
 	.navbar-inverse .navbar-nav > li > a {
 		color: yellowgreen;
@@ -390,13 +403,6 @@ h3{
 		background-color: black;
 	}
 
-	.box-img {
-		display: none!important;
-	}
-
-	.char-title-box {
-		width: 80%;
-	}
 
 	/*this rule is the dropdown menu items properties*/
 	.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
