@@ -79,92 +79,89 @@
 
 
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="../static/js/charFramePage.js"></script>
 <script>
-
 $(document).ready(function() {
 
-    var punishColumn = "Start up frame";
-    var onblockColumn = "Block frame"
-    var otherColumn = "Other?"
+    var punish = "Start up frame";
+    var onblock = "Block frame"
+    var other = "Other?"
 
     $("#Punish_10f").click(function() {
-        filterMoves(punishColumn, "<=10");
+        filterMoves(punish, "<=10");
     });
 
     $("#Punish_12f").click(function() {
-        filterMoves(punishColumn, ">=11;<=12");
+        filterMoves(punish, ">=11;<=12");
     });
 
     $("#Punish_15f").click(function() {
-        filterMoves(punishColumn, "=15");
+        filterMoves(punish, "=15");
     });
 
     $("#Punish_16f").click(function() {
-        filterMoves(punishColumn, ">=16");
+        filterMoves(punish, ">=16");
     });
 
     $("#Punish_13f").click(function() {
-        filterMoves(punishColumn, "=13");
+        filterMoves(punish, "=13");
     });
 
     $("#Punish_14f").click(function() {
-        filterMoves(punishColumn, "=14");
+        filterMoves(punish, "=14");
     });
 
     $("#Onblock_safe").click(function() {
-        filterMoves(onblockColumn, ">=-9");
+        filterMoves(onblock, ">=-9");
     });
 
     $("#Onblock_minus").click(function() {
-        filterMoves(onblockColumn, ">=-9;<=0");
+        filterMoves(onblock, ">=-9;<=0");
     });
 
     $("#Onblock_plus").click(function() {
-        filterMoves(onblockColumn, ">=1;<=9");
+        filterMoves(onblock, ">=1;<=9");
     });
 
     $("#Onblock_plus10").click(function() {
-        filterMoves(onblockColumn, ">=10");
+        filterMoves(onblock, ">=10");
     });
 
     $("#Other_KND").click(function() {
-        filterMoves(otherColumn, "KND");
+        filterMoves(other, "KND");
     });
 
     $("#Other_JS").click(function() {
-        filterMoves(otherColumn, "JS");
+        filterMoves(other, "JS");
     });
 
     $("#Other_LC").click(function() {
-        filterMoves(otherColumn, "LC");
+        filterMoves(other, "LC");
     });
 
     $("#Other_HC").click(function() {
-        filterMoves(otherColumn, "HC");
+        filterMoves(other, "HC");
     });
 
     $("#Other_A").click(function() {    //armour
-        filterMoves(otherColumn, "A");
+        filterMoves(other, "A");
     });
 
     $("#Other_T").click(function() {    //throw
-        filterMoves(otherColumn, "T");
+        filterMoves(other, "T");
     });
 
     $("#Other_L").click(function() {     //launch
-        filterMoves(otherColumn, "L");
+        filterMoves(other, "L");
     });
 
     $("#Other_CHL").click(function() {
-        filterMoves(otherColumn, "CHL");
+        filterMoves(other, "CHL");
     });
 
-
-    function filterMoves(column, frames) {
-        //alert(column + " " + frames);
-    }
-
 });
+
+
 </script>
 
 {% endblock %}

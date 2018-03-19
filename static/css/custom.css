@@ -223,6 +223,38 @@ h3{
 	font-size: 2rem;
 }
 
+.move-table-th {
+
+}
+
+.move-table-column-name {
+    display: inline;
+    margin-right: 17px;
+}
+
+.move-table-arrow-container {
+    float: left;
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+
+    border-bottom: 8px solid #8E8E8E;
+    margin-bottom:1px;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+
+    border-top: 8px solid #8E8E8E;
+    margin-bottom:1px;
+}
 
 /*frame data page css ends here*/
 
