@@ -54,6 +54,10 @@ h3{
 	border: none;
 }
 
+.panel-body{
+
+}
+
 /*This is for the first title(black) nav bar*/
 /*why did changing color here work but not in element?*/
 .navbar-inverse{
@@ -138,7 +142,7 @@ h3{
 
 .framedata_table{
 	width: 100%;
-	border: 1px solid;
+	border: 0px solid;
 	border-collapse: collapse;
 	overflow: auto;
 }
@@ -165,33 +169,35 @@ h3{
 
 /*fixed using https://stackoverflow.com/questions/21168521/scrollable-table-with-fixed-header-in-bootstrap*/
 /*testing scrollable table code start here*/
-.framedata_table > thead,
-.framedata_table > tbody,
-.framedata_table > thead > tr,
-.framedata_table > tbody > tr,
-.framedata_table > thead > tr > th,
-.framedata_table > tbody > tr > td {
-    display: block;
-}
+/*.framedata_table > thead,*/
+/*.framedata_table > tbody,*/
+/*.framedata_table > thead > tr,*/
+/*.framedata_table > tbody > tr,*/
+/*.framedata_table > thead > tr > th,*/
+/*.framedata_table > tbody > tr > td {*/
+    /*display: block;*/
+/*}*/
 
-.framedata_table > tbody > tr:after,
-.framedata_table > thead > tr:after {
-    content: ' ';
-    display: block;
-    visibility: hidden;
-    clear: both;
-}
+/*.framedata_table > tbody > tr:after,*/
+/*.framedata_table > thead > tr:after {*/
+    /*content: ' ';*/
+    /*display: block;*/
+    /*visibility: hidden;*/
+    /*clear: both;*/
+/*}*/
 
-.framedata_table > tbody {
-    overflow-y: auto;
-    height: 500px;
-}
+/*.framedata_table > tbody {*/
+    /*overflow-y: auto;*/
+    /*height: 500px;*/
+/*}*/
 
-.framedata_table > tbody > tr > td,
-.framedata_table > thead > tr > th {
-    width: 12.5%;
-    float: left;
-}
+/*.framedata_table > tbody > tr > td,*/
+/*.framedata_table > thead > tr > th {*/
+    /*width: 12.5%;*/
+    /*float: left;*/
+/*}*/
+
+
 /*test css ends here*/
 
 .table-title{
@@ -239,7 +245,7 @@ h3{
     width: 19px;
     height: 19px;
     background-image: url("../extra_images/icons8-sort-up-19.png");
-    background-color: #b92c28;
+    background-color: #3366ff;
 	cursor: pointer;
 }
 
@@ -247,9 +253,7 @@ h3{
     width: 19px;
     height: 19px;
     background-image: url("../extra_images/icons8-sort-down-19.png");
-	background-color: #b92c28;
-
-    margin-bottom:1px;
+	background-color: #3366ff;
 	cursor: pointer;
 }
 
