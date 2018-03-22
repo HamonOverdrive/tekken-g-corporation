@@ -226,31 +226,28 @@ h3{
 
 .move-table-column-name {
     display: inline;
-    margin-right: 17px;
 }
 
 .move-table-arrow-container {
-    float: left;
+    float: right;
 }
 
 .arrow-up {
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-
-    border-bottom: 8px solid #8E8E8E;
-    margin-bottom:1px;
+    width: 19px;
+    height: 19px;
+    background-image: url("../extra_images/icons8-sort-up-19.png");
+    background-color: #b92c28;
+    cursor: pointer;
 }
 
 .arrow-down {
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
+    width: 19px;
+    height: 19px;
+    background-image: url("../extra_images/icons8-sort-down-19.png");
+    background-color: #b92c28;
 
-    border-top: 8px solid #8E8E8E;
     margin-bottom:1px;
+    cursor: pointer;
 }
 
 /*frame data page css ends here*/
