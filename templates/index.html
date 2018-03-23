@@ -10,7 +10,7 @@
             <div class="panel-body" style="width: 100%;">
                 <div id="characterselect">
                     {#character list order and position is also formatted here what it should look like on website#}
-                    {% set character_list = ["Geese","Panda","Eliza","Lee","Bob","Nina","Akuma","Kazumi","Master_Raven","Miguel","Kuma","Eddy",
+                    {% set character_list = ["Geese","Panda","Eliza","Lee","Bob","Nina","Akuma","Kazumi","Master_Raven","Miguel","Kuma","Eddy","Noctis",
                         "Yoshimitsu","Dragunov","Hwoarang","Law","Asuka","Shaheen","Kazuya","Heihachi","Claudio","LuckyChloe","Lili","Lars","King","Jack-7",
                         "Bryan","Steve","Paul","Xiaoyu","Josie","Jin","Devil_Jin","Katarina","Gigas","Leo","Alisa","Feng"] %}
                     {#having list of characters for loop through it by assigning each character as a select option#}
@@ -24,7 +24,7 @@
                         {% set title = "Tekken 7 |"+character %}
                         <li><a href={{ href }} title={{ title }}><img alt="T7 select {{ character|lower }}.png" src="{{ url_for('static', filename='char/T7_select_'+character|lower+'.png') }}" class="img-responsive" width="44" height="74"></a></li>
                         {#close ul tag after character is set with the given tags if current character is last of row list #}
-                        {% if character =="Eddy" or character == "Jack-7" or character == "Feng" %}
+                        {% if character =="Noctis" or character == "Jack-7" or character == "Feng" %}
                             </ul>
                             <div style="clear: both;"></div>
                         {% endif %}
