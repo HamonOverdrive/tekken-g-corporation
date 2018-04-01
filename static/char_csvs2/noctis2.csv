@@ -1,0 +1,6 @@
+Command,Hit level,Damage,Start up frame,Block frame,Hit frame,Counter hit frame,Notes
+1,H,7,10,+1,+8,+8,
+"1, 2","H, H","7, 8 (15)",10,"+1, -2","+8, +6","+8, +6",
+3,H,15,14,-7,-1,-1,
+4,H,15,12,-8,+3,+3,
+d/f+1,M,10,13,-1,+7,+7,
