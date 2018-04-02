@@ -1,7 +1,7 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
 {#usage of stickytable headers with tablesorter jquery plugins https://github.com/jmosbech/StickyTableHeaders/blob/master/demo/tablesorter.html#}
-<script src="https://unpkg.com/sticky-table-headers"></script>
+{#<script src="https://unpkg.com/sticky-table-headers"></script>#}
 <script src="{{ url_for('static', filename='js/jquery.tablesorter.js') }}"></script>
 <script>
     $(document).ready(function () {
@@ -11,5 +11,86 @@
 </script>
 
 <script src="{{ url_for('static', filename='js/charFramePage.js') }}"></script>
+<script>
+$(document).ready(function() {
 
-<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    var punish = "Start up frame";
+    var onblock = "Block frame"
+    var other = "Other?"
+
+    $("#Punish_10f").click(function() {
+        filterMoves(punish, "<=10");
+    });
+
+    $("#Punish_12f").click(function() {
+        filterMoves(punish, ">=11;<=12");
+    });
+
+    $("#Punish_15f").click(function() {
+        filterMoves(punish, "=15");
+    });
+
+    $("#Punish_16f").click(function() {
+        filterMoves(punish, ">=16");
+    });
+
+    $("#Punish_13f").click(function() {
+        filterMoves(punish, "=13");
+    });
+
+    $("#Punish_14f").click(function() {
+        filterMoves(punish, "=14");
+    });
+
+    $("#Onblock_safe").click(function() {
+        filterMoves(onblock, ">=-9");
+    });
+
+    $("#Onblock_minus").click(function() {
+        filterMoves(onblock, ">=-9;<=0");
+    });
+
+    $("#Onblock_plus").click(function() {
+        filterMoves(onblock, ">=1;<=9");
+    });
+
+    $("#Onblock_plus10").click(function() {
+        filterMoves(onblock, ">=10");
+    });
+
+    $("#Other_KND").click(function() {
+        filterMoves(other, "KND");
+    });
+
+    $("#Other_JS").click(function() {
+        filterMoves(other, "JS");
+    });
+
+    $("#Other_LC").click(function() {
+        filterMoves(other, "LC");
+    });
+
+    $("#Other_HC").click(function() {
+        filterMoves(other, "HC");
+    });
+
+    $("#Other_A").click(function() {    //armour
+        filterMoves(other, "A");
+    });
+
+    $("#Other_T").click(function() {    //throw
+        filterMoves(other, "T");
+    });
+
+    $("#Other_L").click(function() {     //launch
+        filterMoves(other, "L");
+    });
+
+    $("#Other_CHL").click(function() {
+        filterMoves(other, "CHL");
+    });
+
+});
+
+
+</script>
