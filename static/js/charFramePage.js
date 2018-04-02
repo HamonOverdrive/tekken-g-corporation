@@ -89,124 +89,124 @@ function compareToFilterArray(value, filterArray){
 }
 //end of filtering functions
 
-//start of sorting functions
-function sort(ele){
-
-    var columnElement = ele.parentElement.parentElement;
-    var tableElement = columnElement.parentElement.parentElement.parentElement;
-
-    var columnName = "";
-    var tableName = tableElement.id;
-    var headerElement = columnElement.getElementsByTagName("P")[0];
-
-    if(!(headerElement == null)){
-        columnName = headerElement.innerHTML.toLowerCase();
-    } else {
-        console.log("column name undefined");
-    }
-
-    /*Get search column id*/
-    var columnId;
-    for (var i = 0; i < tableElement.rows[0].cells.length; i++) {
-        if (columnName === tableElement.rows[0].cells[i].getElementsByTagName("P")[0].innerHTML.toLowerCase()){
-            columnId = i;
-            break;
-        }
-    }
-
-    var sortType;
-    var otherArrowClassName;
-    if(ele.className === "arrow-up"){
-        sortType = "ASC";
-    } else if (ele.className === "arrow-down"){
-        sortType = "DESC";
-    }
-
-    toggleSortArrows(ele);
-    sortTable_Inner(tableName, columnId, sortType);
-
-}
-
-function toggleSortArrows(arrowEle) {
-
-    //reset all other arrows in the table
-    var tableEle = arrowEle.parentElement.parentElement.parentElement.parentElement;
-    for(var i=0; i < tableEle.rows[0].cells.length;i++){
-        var thEle = tableEle.rows[0].cells[i];
-        thEle.getElementsByClassName("arrow-up")[0].style.display = "block";
-        thEle.getElementsByClassName("arrow-down")[0].style.display = "block";
-    };
-
-    //hide the arrow pressed
-    arrowEle.style.display = "none";
-
-    //show the arrow not pressed
-    var otherArrowClassName;
-    if(arrowEle.className === "arrow-up"){
-        otherArrowClassName = "arrow-down";
-    } else if (arrowEle.className === "arrow-down"){
-        otherArrowClassName = "arrow-up";
-    }
-
-    var otherArrowEle = arrowEle.parentElement.getElementsByClassName(otherArrowClassName)[0];
-    otherArrowEle.style.display = "block";
-
-}
-
-function sortTable_Inner(tableName, columnId, sortType) {
-
-    var table, rows, switching, i, x, y, shouldSwitch;
-    table = document.getElementById(tableName);
-    switching = true;
-
-    /*Make a loop that will continue until no switching has been done:*/
-    while (switching) {
-
-        //start by saying: no switching is done:
-        switching = false;
-        rows = table.getElementsByTagName("TR");
-
-        /*Loop through all table rows (except the first, which contains table headers):*/
-        for (i = 1; i < (rows.length - 1); i++) {
-
-            //start by saying there should be no switching:
-            shouldSwitch = false;
-
-            /*Get the two elements you want to compare, one from current row and one from the next:*/
-            x = rows[i].getElementsByTagName("TD")[columnId];
-            y = rows[i + 1].getElementsByTagName("TD")[columnId];
-
-            x = normaliseSortElement(x);
-            y = normaliseSortElement(y);
-
-            //check if the two rows should switch place:
-            if (sortType === "ASC"){
-                if (x > y) {
-                    //if so, mark as a switch and break the loop:
-                    shouldSwitch= true;
-                    break;
-                }
-            } else if (sortType === "DESC"){
-                if (x < y) {
-                    //if so, mark as a switch and break the loop:
-                    shouldSwitch= true;
-                    break;
-                }
-            }
-        }
-        if (shouldSwitch) {
-            /*If a switch has been marked, make the switch and mark that a switch has been done:*/
-            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-            switching = true;
-        }
-    }
-}
-
-function normaliseSortElement(ele){
-
-    var retValue = ele.innerHTML.toLowerCase();
-
-    return retValue;
-}
-//end of sorting functions
+// //start of sorting functions
+// function sort(ele){
+//
+//     var columnElement = ele.parentElement.parentElement;
+//     var tableElement = columnElement.parentElement.parentElement.parentElement;
+//
+//     var columnName = "";
+//     var tableName = tableElement.id;
+//     var headerElement = columnElement.getElementsByTagName("P")[0];
+//
+//     if(!(headerElement == null)){
+//         columnName = headerElement.innerHTML.toLowerCase();
+//     } else {
+//         console.log("column name undefined");
+//     }
+//
+//     /*Get search column id*/
+//     var columnId;
+//     for (var i = 0; i < tableElement.rows[0].cells.length; i++) {
+//         if (columnName === tableElement.rows[0].cells[i].getElementsByTagName("P")[0].innerHTML.toLowerCase()){
+//             columnId = i;
+//             break;
+//         }
+//     }
+//
+//     var sortType;
+//     var otherArrowClassName;
+//     if(ele.className === "arrow-up"){
+//         sortType = "ASC";
+//     } else if (ele.className === "arrow-down"){
+//         sortType = "DESC";
+//     }
+//
+//     toggleSortArrows(ele);
+//     sortTable_Inner(tableName, columnId, sortType);
+//
+// }
+//
+// function toggleSortArrows(arrowEle) {
+//
+//     //reset all other arrows in the table
+//     var tableEle = arrowEle.parentElement.parentElement.parentElement.parentElement;
+//     for(var i=0; i < tableEle.rows[0].cells.length;i++){
+//         var thEle = tableEle.rows[0].cells[i];
+//         thEle.getElementsByClassName("arrow-up")[0].style.display = "block";
+//         thEle.getElementsByClassName("arrow-down")[0].style.display = "block";
+//     };
+//
+//     //hide the arrow pressed
+//     arrowEle.style.display = "none";
+//
+//     //show the arrow not pressed
+//     var otherArrowClassName;
+//     if(arrowEle.className === "arrow-up"){
+//         otherArrowClassName = "arrow-down";
+//     } else if (arrowEle.className === "arrow-down"){
+//         otherArrowClassName = "arrow-up";
+//     }
+//
+//     var otherArrowEle = arrowEle.parentElement.getElementsByClassName(otherArrowClassName)[0];
+//     otherArrowEle.style.display = "block";
+//
+// }
+//
+// function sortTable_Inner(tableName, columnId, sortType) {
+//
+//     var table, rows, switching, i, x, y, shouldSwitch;
+//     table = document.getElementById(tableName);
+//     switching = true;
+//
+//     /*Make a loop that will continue until no switching has been done:*/
+//     while (switching) {
+//
+//         //start by saying: no switching is done:
+//         switching = false;
+//         rows = table.getElementsByTagName("TR");
+//
+//         /*Loop through all table rows (except the first, which contains table headers):*/
+//         for (i = 1; i < (rows.length - 1); i++) {
+//
+//             //start by saying there should be no switching:
+//             shouldSwitch = false;
+//
+//             /*Get the two elements you want to compare, one from current row and one from the next:*/
+//             x = rows[i].getElementsByTagName("TD")[columnId];
+//             y = rows[i + 1].getElementsByTagName("TD")[columnId];
+//
+//             x = normaliseSortElement(x);
+//             y = normaliseSortElement(y);
+//
+//             //check if the two rows should switch place:
+//             if (sortType === "ASC"){
+//                 if (x > y) {
+//                     //if so, mark as a switch and break the loop:
+//                     shouldSwitch= true;
+//                     break;
+//                 }
+//             } else if (sortType === "DESC"){
+//                 if (x < y) {
+//                     //if so, mark as a switch and break the loop:
+//                     shouldSwitch= true;
+//                     break;
+//                 }
+//             }
+//         }
+//         if (shouldSwitch) {
+//             /*If a switch has been marked, make the switch and mark that a switch has been done:*/
+//             rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+//             switching = true;
+//         }
+//     }
+// }
+//
+// function normaliseSortElement(ele){
+//
+//     var retValue = ele.innerHTML.toLowerCase();
+//
+//     return retValue;
+// }
+// //end of sorting functions
 

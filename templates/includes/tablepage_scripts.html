@@ -1,0 +1,15 @@
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+{#usage of stickytable headers with tablesorter jquery plugins https://github.com/jmosbech/StickyTableHeaders/blob/master/demo/tablesorter.html#}
+<script src="https://unpkg.com/sticky-table-headers"></script>
+<script src="{{ url_for('static', filename='js/jquery.tablesorter.js') }}"></script>
+<script>
+    $(document).ready(function () {
+			// initialize stickyTableHeaders _after_ tablesorter
+			$(".framedata_table").tablesorter();
+		});
+</script>
+
+<script src="{{ url_for('static', filename='js/charFramePage.js') }}"></script>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
