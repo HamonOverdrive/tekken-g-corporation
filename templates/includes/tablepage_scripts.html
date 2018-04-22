@@ -6,7 +6,11 @@
 <script>
     $(document).ready(function () {
 			// initialize stickyTableHeaders _after_ tablesorter
-			$(".framedata_table").tablesorter();
+			$(".framedata_table").tablesorter({
+                theme: 'black',
+
+                headerTemplate : '{icon}{content}'
+            });
 		});
 </script>
 
