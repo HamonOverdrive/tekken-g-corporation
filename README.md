@@ -14,7 +14,6 @@ requirements.txt
 
 * Frame data webscraped using get_csvs.py and made into csv files.
 * The csv files are injected into the html files of each character when requested.
-* Sortable tables
 
 ## Deployment
 
