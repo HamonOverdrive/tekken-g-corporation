@@ -2,6 +2,7 @@
 <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
 {#usage of stickytable headers with tablesorter jquery plugins https://github.com/jmosbech/StickyTableHeaders/blob/master/demo/tablesorter.html#}
 {#<script src="https://unpkg.com/sticky-table-headers"></script>#}
+<script src="{{ url_for('static', filename='js/jquery.stickytableheaders.js') }}"></script>
 <script src="{{ url_for('static', filename='js/jquery.tablesorter.js') }}"></script>
 <script>
     $(document).ready(function () {
@@ -11,6 +12,7 @@
 
                 headerTemplate : '{icon}{content}'
             });
+            $(".framedata_table").stickyTableHeaders();
 		});
 </script>
 
