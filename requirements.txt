@@ -19,5 +19,5 @@ setuptools==28.8.0
 six==1.11.0
 urllib3==1.22
 webencodings==0.5.1
-Werkzeug==0.13
+Werkzeug==0.15.3
 
