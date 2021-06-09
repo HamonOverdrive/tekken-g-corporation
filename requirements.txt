@@ -11,7 +11,7 @@ lxml==4.1.1
 MarkupSafe==1.0
 numpy==1.13.3
 pandas==0.21.1
-pip==9.0.1
+pip==19.2
 python-dateutil==2.6.1
 pytz==2017.3
 requests==2.18.4
